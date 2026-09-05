@@ -1,0 +1,25 @@
+model:
+  num_labels: 8
+  id2label:
+    0: background
+    1: road
+    2: divider-line
+    3: dotted-line
+    4: double-line
+    5: random-line
+    6: road-sign-line
+    7: solid-line
+  label2id:
+    background: 0
+    road: 1
+    divider-line: 2
+    dotted-line: 3
+    double-line: 4
+    random-line: 5
+    road-sign-line: 6
+    solid-line: 7
+
+data:
+  size: 512
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tooling
+.claude/
+.vscode/
+.idea/
+
+# Build artefacts - device-specific, rebuild with training/build_engine.py
+*.engine
+*.plan
+
+# Training checkpoints - large; the exported ONNX is committed instead
+*.pth
+*.pt
+
+# Recorded runs - footage is large; telemetry CSVs in data/ are kept
+*.mp4
+*.avi
+*.mkv
+run*.mp4
+
+# Generated output
+results/
+UnityCaptures/
+*.log
