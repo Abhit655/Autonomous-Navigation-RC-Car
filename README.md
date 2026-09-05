@@ -8,11 +8,32 @@ Demonstrated on the Dangan athletics track, University of Galway, where the vehi
 maintained lane position between adjacent markings while driving forward under autonomous
 control.
 
-![Segmentation on the Dangan athletics track](docs/track_segmentation.jpg)
+### The vehicle
 
-*Original frame left, model output right. Green denotes continuous markings, red denotes
-broken markings. The model was trained only on public road imagery and had never seen an
-athletics track.*
+![The assembled vehicle on the Dangan athletics track](docs/01_vehicle.jpg)
+
+A 1:14 scale chassis carrying a Jetson Orin Nano, an Arduino Uno for actuation, and a CSI
+camera on a printed bracket. The camera is the only sensor.
+
+### Perception
+
+![Segmentation on the athletics track and on unseen dashcam footage](docs/02_segmentation.jpg)
+
+Left: the Dangan athletics track under wet, overcast conditions, with continuous and broken
+markings correctly separated. Right: unseen road dashcam footage. The model was fine-tuned
+on a public road-marking dataset and had never encountered an athletics track, so both are
+zero-shot transfer to unseen domains.
+
+### Digital twin
+
+![The Unity digital twin used for development](docs/03_digital_twin.jpg)
+
+A Unity reconstruction of the stadium used to develop and validate the controller before
+touching hardware. Clockwise from top left: the complete 400 m oval; generated checkpoint
+volumes and the centreline spline along the target lane; the simulated vehicle with its
+camera; and the vehicle's own camera view, which is the only input the controller receives.
+The virtual camera is configured from the physical sensor's optical parameters rather than
+by eye.
 
 ---
 
